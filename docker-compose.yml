@@ -1,0 +1,12 @@
+version: '2'
+services:
+  php-fpm:
+    build:
+      context: .
+      args:
+        - APP_CODE_PATH_CONTAINER
+        - TZ
+    container_name: laravel-php7.2-fpm
+    environment:
+      - XDEBUG
+    restart: always
